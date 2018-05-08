@@ -1,6 +1,7 @@
 
 body{
 	min-width: 300px;
+	background: black;
 	}
 .firstLine{
 	display:flex;
