@@ -1,0 +1,84 @@
+
+body{
+	min-width: 300px;
+	}
+.firstLine{
+	display:flex;
+	flex-direction: row;
+	justify-content: space-around;
+	border: 2px solid red;
+}
+
+.secondLine{
+	display:flex;
+	flex-direction: row;
+	justify-content: space-around;
+	border: 2px solid red;
+}
+
+
+.thirdLine{
+	display:flex;
+	flex-direction: row;
+	justify-content: space-around;
+	border: 2px solid red;
+}
+
+.thirdLine .six {
+	width: 200px;
+	min-width: 200px;
+}
+
+.firstLine .one{
+	width:20%;
+	background: green;
+}
+.firstLine .two{
+	width:80%;
+	background: blue;
+}
+
+.secondLine .three{
+	width:50%;
+	background:orange;
+}
+.secondLine .four{
+	width:50%;
+	background: pink;
+}
+
+.thirdLine .five{
+	width:100%;
+	background:purple;
+}
+.thirdLine .six{
+	background: gray;
+}
+
+@media screen and (max-width: 600px) {
+	.firstLine {
+		-webkit-flex-direction: column;
+		-moz-flex-direction: column;
+		-ms-flex-direction: column;
+		-o-flex-direction: column;
+		flex-direction: column;
+	}
+	.secondLine {
+		-webkit-flex-direction: column;
+		-moz-flex-direction: column;
+		-ms-flex-direction: column;
+		-o-flex-direction: column;
+		flex-direction: column;
+	}
+	.thirdLine {
+		-webkit-flex-direction: column;
+		-moz-flex-direction: column;
+		-ms-flex-direction: column;
+		-o-flex-direction: column;
+		flex-direction: column;
+	}
+
+	.firstLine .one, .firstLine .two, .secondLine .three, .secondLine .four, .thirdLine .five {
+		width:100%;
+	}
+}
