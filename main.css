@@ -33,27 +33,33 @@ body{
 .firstLine .one{
 	width:20%;
 	background: green;
+	text-align: left;
 }
 .firstLine .two{
 	width:80%;
 	background: blue;
+	text-align: right;
 }
 
 .secondLine .three{
 	width:50%;
 	background:orange;
+	text-align: center;
 }
 .secondLine .four{
 	width:50%;
 	background: pink;
+	text-align: center;
 }
 
 .thirdLine .five{
 	width:100%;
 	background:purple;
+	text-align: left;
 }
 .thirdLine .six{
 	background: gray;
+	text-align: left;
 }
 
 @media screen and (max-width: 600px) {
