@@ -85,7 +85,7 @@ body{
 		flex-direction: column;
 	}
 
-	.firstLine .one, .firstLine .two, .secondLine .three, .secondLine .four, .thirdLine .five {
+	.firstLine .one, .firstLine .two, .secondLine .three, .secondLine .four, .thirdLine .five, .thirdLine .six {
 		width:100%;
 	}
 }
