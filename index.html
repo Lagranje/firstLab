@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Jqeury Animations</title>
+	<link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+        <script type="text/javascript" src="jquery.snowfall.js"></script>
+        <link rel="stylesheet" href="main.css">
+        <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+        }
+        body { background-color:#343434; color:#fff;}
+        h1 { margin:250px auto; text-align:center;}
+        </style>
+</head>
+<body>
+	<div class="pacmanOpen" id="pacman"></div>
+	<div class="ramona"></div>
+	<div class="loader">
+  <span class="count">1000</span>
+</div>
+
+	<input type="button" id="start" value="Почати анімацію">
+
+		<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+	<script src="jquery.snowfall.js"></script>
+	<script type="text/javascript">
+		 var iteration = 10000;
+			var haha = function togglePacman() {
+			  var c = $('#pacman').hasClass('pacmanOpen');
+			  if(c) {
+			    $('#pacman').removeClass('pacmanOpen').addClass('pacmanClose');
+			  }
+			  else {
+			    $('#pacman').removeClass('pacmanClose').addClass('pacmanOpen');
+			  }
+			  iteration--;
+			  if(iteration) {
+			    setTimeout(togglePacman, 250);
+			  }
+			  else {
+			    iteration = 10;
+			  }
+			}
+		document.getElementById("start").addEventListener("click", function(){
+			haha();
+			$.snowfall.start({
+                content: '<i class="fa fa-snowflake-o"></i>',
+				size: {
+                    min: 20,
+                    max: 50
+                }
+            });
+            $('.count').each(function () {
+		    $(this).prop('Counter',0).animate({
+		        Counter: $(this).text()
+		    }, {
+		        duration: 3000,
+		        easing: 'swing',
+		        step: function (now) {
+		            $(this).text(Math.ceil(now));
+		        }
+		    });
+		    document.getElementById("start").style.display="none";
+});
+
+		})
+           
+        </script>
+
+
+</body>
+</html>
