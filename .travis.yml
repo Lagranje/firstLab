@@ -1,0 +1,9 @@
+language: generic
+deploy:
+  provider: s3
+  access_key_id: AKIAIMIKJZCH2IWDW56Q
+  secret_access_key: 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
+  bucket: git-to-amazon-s3-outputbucket-gt0b3f04107
+  on:
+    repo: hotitepechenku/firstLab
+  acl: public_read
