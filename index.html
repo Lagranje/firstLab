@@ -7,7 +7,6 @@
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.9/howler.core.min.js"></script>
         <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
         <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-        <script type="text/javascript" src="jquery.snowfall.js"></script>
         <link rel="stylesheet" type="text/css" href="src/css/circles.css">
 	 	<script type="text/paperscript" canvas="myCanvas">
 			var keyData = {
@@ -172,10 +171,10 @@
 	
 	function onKeyDown(event) {
 	if(keyData[event.key]){
-	var maxPoint = new Point (view.size.width, view.size.height);
-	var randomPoint = Point.random();
-	var point = maxPoint*randomPoint;
-	var newCircle = new Path.Circle(point,500);	
+	var maximumPoint = new Point (view.size.width, view.size.height);
+	var randPoint = Point.random();
+	var p = maximumPoint*randPoint;
+	var newCircle = new Path.Circle(p,500);	
 	newCircle.fillColor = keyData[event.key].color;
 	keyData[event.key].sound.play();
 	circles.push(newCircle);
@@ -194,7 +193,7 @@
     }
   }
 }
-	 	</script>
+</script>
 	 	<style>
  			html, body {
 	            width: 100%;
